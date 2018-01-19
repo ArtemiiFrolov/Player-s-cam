@@ -19,33 +19,36 @@
 
 
 <div class="ui grid">
-  <div class="ten wide stretched column">
+  <div class="twelve wide stretched column">
     <div class="ui segment">
-     <iframe class="centered" id="video" width="840" height="473" src="https://www.twitch.tv/blizzheroesru/embed" frameborder="0" allowfullscreen></iframe>
+     <iframe class="centered" id="video" height="700vh" width="100%"  src="https://www.twitch.tv/blizzheroesru/embed" frameborder="0"></iframe>
     </div>
   </div>
-  <div class="six wide column">
+  <div class="four wide column">
     <div class="ui vertical fluid right tabular menu">
       <a class="active item" id="video1">
 	   <div class="item">
 			<img class="ui small image" src="robben.jfif">
 		</div>
+		
       <h4 class="ui header">Robben</h4>
-		<p>Online</p>
+		
       </a>
       <a class="item" id="video2">
         <div class="item">
 			<img class="ui small image" src="lewandovski.jfif">
 		</div>
+		
       <h4 class="ui header">Levandowski</h4>
-		<p>Online</p>
+		
       </a>
       <a class="item" id="video3">
          <div class="item">
 			<img class="ui small image" src="muller.jfif">
 		</div>
+		
       <h4 class="ui header">Muller</h4>
-		<p>Offline</p>
+		
       </a>      
     </div>
 
@@ -63,8 +66,6 @@ $(document).ready(function(){
 		src = "https://www.twitch.tv/blizzheroesru/embed";
  
 	$video.attr('src', src );
-	var $act = $('#video1');
-	$act.attr =('class', "active item");
 	
 	
     });
