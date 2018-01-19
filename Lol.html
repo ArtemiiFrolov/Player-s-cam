@@ -16,17 +16,42 @@
 
 </head>
 <body>
-<div class="ui container">
-	<div class="ui attached segment">
-	
-		<iframe id="video" width="840" height="473" src="https://www.twitch.tv/blizzheroesru/embed" frameborder="0" allowfullscreen></iframe>
-	</div>
-<div class="ui three bottom attached buttons">
-    <div class="ui button" id="video1">Starcraft</div>
-    <div class="ui button" id="video2">Fifa</div>
-	<div class="ui button" id="video3">Dota 2</div>
+
+
+<div class="ui grid">
+  <div class="ten wide stretched column">
+    <div class="ui segment">
+     <iframe class="centered" id="video" width="840" height="473" src="https://www.twitch.tv/blizzheroesru/embed" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="six wide column">
+    <div class="ui vertical fluid right tabular menu">
+      <a class="active item" id="video1">
+	   <div class="item">
+			<img class="ui small image" src="robben.jfif">
+		</div>
+      <h4 class="ui header">Robben</h4>
+		<p>Online</p>
+      </a>
+      <a class="item" id="video2">
+        <div class="item">
+			<img class="ui small image" src="lewandovski.jfif">
+		</div>
+      <h4 class="ui header">Levandowski</h4>
+		<p>Online</p>
+      </a>
+      <a class="item" id="video3">
+         <div class="item">
+			<img class="ui small image" src="muller.jfif">
+		</div>
+      <h4 class="ui header">Muller</h4>
+		<p>Offline</p>
+      </a>      
+    </div>
+
+  </div>
 </div>
-</div>
+
 
 </body>
 </html>
@@ -38,6 +63,10 @@ $(document).ready(function(){
 		src = "https://www.twitch.tv/blizzheroesru/embed";
  
 	$video.attr('src', src );
+	var $act = $('#video1');
+	$act.attr =('class', "active item");
+	
+	
     });
 	$('#video2').click(function(){
     var $video = $('#video'),
@@ -51,6 +80,12 @@ $(document).ready(function(){
  
 	$video.attr('src', src );
     });
+});
+$(document).ready(function(){
+    $('.ui .item').on('click', function() {
+        $('.ui .item').removeClass('active');
+        $(this).addClass('active');
+    });             
 });
 
 
