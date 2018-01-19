@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Player's cam</title>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="semantic/dist/semantic.min.js"></script>
+<style>
+	.button1 {
+		margin:50px;
+		height:20px;
+		background:tomato;
+		color:#fff;
+		padding:20px;
+		cursor:pointer;
+	}
+</style>
+
+</head>
+<body>
+	<div class="button1" id="video1">Starcraft</div>
+	<div class="button1" id="video2">Fifa</div>
+	<div class="button1" id="video3">Dota 2</div>
+	<iframe id="video" width="560" height="315" src="https://www.twitch.tv/blizzheroesru/embed" frameborder="0" allowfullscreen></iframe>
+</body>
+</html>
+<script>
+
+$(document).ready(function(){
+    $('#video1').click(function(){
+    var $video = $('#video'),
+		src = "https://www.twitch.tv/blizzheroesru/embed";
+ 
+	$video.attr('src', src );
+    });
+	$('#video2').click(function(){
+    var $video = $('#video'),
+		src = "https://www.twitch.tv/pandafxfx/embed";
+ 
+	$video.attr('src', src );
+    });
+	$('#video3').click(function(){
+    var $video = $('#video'),
+		src = "https://www.twitch.tv/ybicanoooobov/embed";
+ 
+	$video.attr('src', src );
+    });
+});
+
+
+</script>
