@@ -57,7 +57,7 @@
 <div class="row  landpage-image2">
   <div class="ten wide stretched column">
     
-     <iframe class="centered" id="video" height="550vh" width="100%"  src="http://192.168.1.194/html/min.php" frameborder="0" allowfullscreen></iframe>
+     <iframe class="centered" id="video"  width="300"  src="https://www.youtube.com/embed/iM5oCCnkXIs" frameborder="0" allowfullscreen ></iframe>
     
   </div>
   <div class="six wide column">
@@ -90,7 +90,7 @@
 					<b>Sponsors</b>
 					</div>
 					<div class="twelve wide column" align="center">
-					Adidas, Bayern
+					Adidas, Audi
 					</div>
 					
 				</div>		
@@ -131,9 +131,8 @@
 					<b>Sponsors</b>
 					</div>
 					<div class="twelve wide column" align="center">
-					Bayern, DHL
+					Adidas, DHL
 					</div>
-					
 				</div>		
 		</div>	
 		</div>
@@ -174,9 +173,8 @@
 					<b>Sponsors</b>
 					</div>
 					<div class="twelve wide column" align="center">
-					Adidas, Bayern, DHL
+					 Audi, DHL
 					</div>
-					
 				</div>		
 				</div>
 		</div>
@@ -189,6 +187,19 @@
 
   </div>
 
+ <div class="centered row">
+  <div class="eight centered wide column">
+	<div class="ui action input">
+			<input type="text" placeholder="Your reaction!" id="reaction">
+			<button class="ui button" id="react">Send</button>
+	</div>
+	</div>
+	<div class="eight wide column">
+		<img class="ui tiny image" id="image1" src="quest.png">
+	</div>
+</div>
+  
+  
 </div>
 
 </div>
@@ -227,6 +238,43 @@ $(document).ready(function(){
         $(this).addClass('active');
     });             
 });
-
+   $('#react').click(function(){
+        var params = {
+            // These are optional request parameters. They are set to their default values.
+            "timezoneOffset": "0",
+            "verbose": "true",
+            "spellCheck": "false",
+            "staging": "false",
+        };
+     var reaction = document.getElementById("reaction").value+"&";
+	 var $im = $('#image1');
+ 
+	
+	
+        $.ajax({
+            url: "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/05268794-99b6-4c4e-81b5-588023f96904?q="+reaction + $.param(params),
+            beforeSend: function(xhrObj){
+                // Request headers
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","97a31b4981ce40c28c3de0ddc0815dfa");
+            },
+            type: "GET",
+            // The request body may be empty for a GET request
+            data: "{body}",
+        })
+        .done(function(data) {
+            // Display a popup containing the top intent
+			if (data.topScoringIntent.intent == "HiW") {	
+		
+				   $im.attr('src', "tu.png" );
+				} else {
+			
+					$im.attr('src', "td.png" );
+				}
+            
+        })
+        .fail(function() {
+            alert("error");
+        });
+    });
 
 </script>

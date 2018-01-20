@@ -6,6 +6,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <link rel="stylesheet" href="css/semantic.min.css">
+<link rel="stylesheet" href="css/back.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.semanticui.min.css" >
 
 <script
@@ -16,24 +17,57 @@
 
 </head>
 <body>
-
-<div class="container">
-<div class="ui grid">
-  <div class="twelve wide stretched column">
-    <div class="ui segment">
-     <iframe class="centered" id="video" height="700vh" width="100%"  src="https://www.twitch.tv/blizzheroesru/embed" frameborder="0"></iframe>
-    </div>
+<div class="ui red inverted menu">
+	<div class="item">
+    <img src="bayern.png">
   </div>
-  <div class="four wide column">
-    <div class="ui vertical fluid right tabular menu">
-      <a class="active item" id="video1">
+  <a class="active item">
+    <h3>Professional match</h3>
+  </a>
+  <a class="item">
+    <h3> Amateurs</h3>
+  </a>
+  <a class="item">
+    <h3>Buy ProCam</h3>
+  </a>
+  <a class="item">
+    <h3>Allianz arena</h3>
+  </a>
+  <a class="item">
+    <h3>Tickets</h3>
+  </a>
+  <a class="item">
+    <h3>About FCBayern</h3>
+  </a>
+  <a class="item">
+    <h3>Fans</h3>
+  </a>
+</div>
+<div class="landpage-image">
+<div class=" ui middle aligned center grid">
+
+<div class="row">
+<div class="ui container">
+<div class="ui grid">
+<div class="centered row">
+	<div class="ui inverted segment">
+		<h2 class="ui inverted header">Bayern 2:0 Real</h2>
+	</div>
+</div>
+<div class="row  landpage-image2">
+<div class="ui attached segment">
+   <iframe class="centered" id="video" height="550vh" width="100%"  src="https://www.twitch.tv/pandafxfx/embed" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="ui three bottom attached buttons">
+    <div class="ui button">
+		 <a class="active item" id="video1">
 	   <div class="item">
 	   <div class="ui grid">
-			<div class="six wide column"><img class="ui small image" src="robben.jfif"><h3 class="ui header" align="center">Robben</h4></div>
+			<div class="six wide column"><img class="ui tiny image" src="robben.jfif"><h3 class="ui header" align="center">Robben</h4></div>
 			<div class="ten wide column">
 				<div class="ui grid">
 					<div class="four wide column" align="center">
-					<img class="ui small image"  src="heart.png" width="50%">
+					<img class="ui tiny image"  src="heart.png" width="50%">
 					</div>
 					<div class="twelve wide column" align="center">
 					<button class="ui negative basic button">140</button>
@@ -54,7 +88,7 @@
 					<b>Sponsors</b>
 					</div>
 					<div class="twelve wide column" align="center">
-					Adidas, Bayern
+					Adidas, Audi
 					</div>
 					
 				</div>		
@@ -63,18 +97,20 @@
       </div>
 		
       </a>
-      <a class="item" id="video2">
+	</div>
+    <div class="ui button">
+	 <a class="item" id="video2">
        
 		<div class="item">
 	   <div class="ui grid">
-			<div class="six wide column"><img class="ui small image" src="lewandovski.jfif"> <h4 class="ui header" align="center">Levandowski</h4></div>
+			<div class="six wide column"><img class="ui tiny image" src="lewandovski.jfif"> <h4 class="ui header" align="center">Levandowski</h4></div>
 			
 			
 			
 						<div class="ten wide column">
 				<div class="ui grid">
 					<div class="four wide column" align="center">
-					<img class="ui small image"  src="heart.png" width="50%">
+					<img class="ui tiny image"  src="heart.png" width="50%">
 					</div>
 					<div class="twelve wide column" align="center">
 					<button class="ui positive basic button">100</button>
@@ -95,9 +131,8 @@
 					<b>Sponsors</b>
 					</div>
 					<div class="twelve wide column" align="center">
-					Bayern, DHL
+					Adidas, DHL
 					</div>
-					
 				</div>		
 		</div>	
 		</div>
@@ -105,19 +140,20 @@
      
 		
       </a>
+	</div>
+	<div class="ui button">
+	
       <a class="item" id="video3">
         
 		<div class="item">
 	   <div class="ui grid">
-			<div class="six wide column"><img class="ui small image" src="muller.jfif"> <h4 class="ui header" align="center">Muller</h4></div>
-			
-			
+			<div class="six wide column"><img class="ui tiny image" src="muller.jfif"> <h4 class="ui header" align="center">Muller</h4></div>
 			
 			
 						<div class="ten wide column">
 				<div class="ui grid">
 					<div class="four wide column" align="center">
-					<img class="ui small image"  src="heart.png" width="50%">
+					<img class="ui tiny image"  src="heart.png" width="50%">
 					</div>
 					<div class="twelve wide column" align="center">
 					<button class="ui yellow basic button">120</button>
@@ -138,22 +174,30 @@
 					<b>Sponsors</b>
 					</div>
 					<div class="twelve wide column" align="center">
-					Adidas, Bayern, DHL
+					 Audi, DHL
 					</div>
-					
 				</div>		
+				</div>
 		</div>
 		</div>
 		</div>
      
 		
-      </a>      
-    </div>
-
-  </div>
+      </a>    
+	</div>
+</div>
 </div>
 
-<div>
+
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>
 <script>
@@ -186,6 +230,43 @@ $(document).ready(function(){
         $(this).addClass('active');
     });             
 });
-
+   $('#react').click(function(){
+        var params = {
+            // These are optional request parameters. They are set to their default values.
+            "timezoneOffset": "0",
+            "verbose": "true",
+            "spellCheck": "false",
+            "staging": "false",
+        };
+     var reaction = document.getElementById("reaction").value+"&";
+	 var $im = $('#image1');
+ 
+	
+	
+        $.ajax({
+            url: "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/05268794-99b6-4c4e-81b5-588023f96904?q="+reaction + $.param(params),
+            beforeSend: function(xhrObj){
+                // Request headers
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","97a31b4981ce40c28c3de0ddc0815dfa");
+            },
+            type: "GET",
+            // The request body may be empty for a GET request
+            data: "{body}",
+        })
+        .done(function(data) {
+            // Display a popup containing the top intent
+			if (data.topScoringIntent.intent == "HiW") {	
+		
+				   $im.attr('src', "tu.png" );
+				} else {
+			
+					$im.attr('src', "td.png" );
+				}
+            
+        })
+        .fail(function() {
+            alert("error");
+        });
+    });
 
 </script>
