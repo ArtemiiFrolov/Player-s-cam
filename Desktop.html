@@ -16,7 +16,7 @@
 <script src="js/semantic.min.js"></script>
 
 </head>
-<body>
+<body onload="setTimeout('init();', 100);">
 <div class="ui red inverted menu">
 	<div class="item">
     <img src="bayern.png">
@@ -56,9 +56,9 @@
 </div>
 <div class="row  landpage-image2">
   <div class="ten wide stretched column">
-    
-     <iframe class="centered" id="video"  width="100%"  src="http://192.168.1.194/html/min.php" frameborder="0" allowfullscreen ></iframe>
-    
+   <!--  <img id="mjpeg_dest"  src="http://192.168.1.194/html/cam_pic.php?time=1516476589503&amp;pDelay=40000">
+     <img class="centered" id="video"  width="100%"  src="http://192.168.1.194/html/min.php" frameborder="0" allowfullscreen ></iframe> -->
+    <img id="mjpeg_dest" />
   </div>
   <div class="six wide column">
     <div class="ui vertical fluid right tabular menu">
@@ -277,4 +277,29 @@ $(document).ready(function(){
         });
     });
 
+var mjpeg_img;
+var flag=0; 
+function reload_img () {
+if (flag==0){
+	mjpeg_img.src = "http://192.168.1.194/html/cam_pic.php?time=" + new Date().getTime();
+  }
+  else{
+  
+  }
+}
+function error_img () {
+  
+  if (flag==0){
+	setTimeout("mjpeg_img.src = \"http://192.168.1.194/html/cam_pic.php?time=\" + new Date().getTime()  + \"&pDelay=4000\"", 1000);
+  }
+  else{
+  
+  }
+}
+function init() {
+  mjpeg_img = document.getElementById("mjpeg_dest");
+  mjpeg_img.onload = reload_img;
+  mjpeg_img.onerror = error_img;
+  reload_img();
+}
 </script>
