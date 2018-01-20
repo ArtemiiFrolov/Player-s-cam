@@ -1,0 +1,21 @@
+.landpage-image{
+      height: 100%;
+}
+
+.landpage-image{
+    background-image: url(Allianz2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.landpage-image2{
+      height: 100%;
+}
+
+.landpage-image2{
+    background-image: url(white.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
