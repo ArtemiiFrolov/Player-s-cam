@@ -16,7 +16,8 @@
 <script src="js/semantic.min.js"></script>
 
 </head>
-<body onload="setTimeout('init();', 100);">
+<!-- onload="setTimeout('init();', 100);" -->
+<body>
 <div class="ui red inverted menu">
 	<div class="item">
     <img src="bayern.png">
@@ -46,199 +47,98 @@
 <div class="landpage-image">
 <div class=" ui middle aligned center grid">
 
-<div class="row">
+
 <div class="ui container">
-<div class="ui grid">
-<div class="centered row">
-	<div class="ui inverted segment">
-		<h2 class="ui inverted header">Bayern 2:0 Real</h2>
+<div class="ui teal progress" data-percent="74" id="example1">
+		<div class="bar"></div>
+	<div class="label">68:30</div>
 	</div>
-</div>
+<div class="ui grid">
+
 <div class="row  landpage-image2">
   <div class="ten wide stretched column">
+ 
+  <iframe class="centered" id="video"  width="100%"  src="https://www.youtube.com/embed/hzpxDaItO7o" frameborder="0" allowfullscreen ></iframe>
    <!--  <img id="mjpeg_dest"  src="http://192.168.1.194/html/cam_pic.php?time=1516476589503&amp;pDelay=40000">
-     <img class="centered" id="video"  width="100%"  src="http://192.168.1.194/html/min.php" frameborder="0" allowfullscreen ></iframe> -->
-    <img id="mjpeg_dest" />
+      -->
+   <!-- <img id="mjpeg_dest" /> -->
   </div>
   <div class="six wide column">
     <div class="ui vertical fluid right tabular menu">
       <a class="active item" id="video1">
-	   <div class="item">
-	   <div class="ui grid">
-			<div class="six wide column"><img class="ui small image" src="robben.jfif"><h3 class="ui header" align="center">Robben</h4></div>
-			<div class="ten wide column">
-				<div class="ui grid">
-					<div class="four wide column" align="center">
-					<img class="ui small image"  src="heart.png" width="50%">
-					</div>
-					<div class="twelve wide column" align="center">
-					<button class="ui negative basic button">140</button>
-					</div>
-					<div class="four wide column" align="center">
-					<b>Position</b>
-					</div>
-					<div class="twelve wide column" align="center">
-					Attack
-					</div>
-					<div class="four wide column" align="center">
-					<b>Status</b>
-					</div>
-					<div class="twelve wide column" align="center">
-					Online
-					</div>
-					<div class="four wide column" align="center">
-					<b>Sponsors</b>
-					</div>
-					<div class="twelve wide column" align="center">
-					Adidas, Audi
-					</div>
-					
-				</div>		
-		</div>
-		</div>
-      </div>
-		
+		 <img class="ui image" src="Robben.png">
+	  
       </a>
       <a class="item" id="video2">
-       
-		<div class="item">
-	   <div class="ui grid">
-			<div class="six wide column"><img class="ui small image" src="lewandovski.jfif"> <h4 class="ui header" align="center">Levandowski</h4></div>
-			
-			
-			
-						<div class="ten wide column">
-				<div class="ui grid">
-					<div class="four wide column" align="center">
-					<img class="ui small image"  src="heart.png" width="50%">
-					</div>
-					<div class="twelve wide column" align="center">
-					<button class="ui positive basic button">100</button>
-					</div>
-					<div class="four wide column" align="center">
-					<b>Position</b>
-					</div>
-					<div class="twelve wide column" align="center">
-					Semi-attack
-					</div>
-					<div class="four wide column" align="center">
-					<b>Status</b>
-					</div>
-					<div class="twelve wide column" align="center">
-					Online
-					</div>
-					<div class="four wide column" align="center">
-					<b>Sponsors</b>
-					</div>
-					<div class="twelve wide column" align="center">
-					Adidas, DHL
-					</div>
-				</div>		
-		</div>	
-		</div>
-		</div>
-     
-		
+       <img class="ui image" src="Lewandowski.png">
       </a>
       <a class="item" id="video3">
-        
-		<div class="item">
-	   <div class="ui grid">
-			<div class="six wide column"><img class="ui small image" src="muller.jfif"> <h4 class="ui header" align="center">Muller</h4></div>
-			
-			
-			
-			
-						<div class="ten wide column">
-				<div class="ui grid">
-					<div class="four wide column" align="center">
-					<img class="ui small image"  src="heart.png" width="50%">
-					</div>
-					<div class="twelve wide column" align="center">
-					<button class="ui yellow basic button">120</button>
-					</div>
-					<div class="four wide column" align="center">
-					<b>Position</b>
-					</div>
-					<div class="twelve wide column" align="center">
-					Defend
-					</div>
-					<div class="four wide column" align="center">
-					<b>Status</b>
-					</div>
-					<div class="twelve wide column" align="center">
-					Offline
-					</div>
-					<div class="four wide column" align="center">
-					<b>Sponsors</b>
-					</div>
-					<div class="twelve wide column" align="center">
-					 Audi, DHL
-					</div>
-				</div>		
-				</div>
-		</div>
-		</div>
-		</div>
-     
+        <img class="ui image" src="Müller.png">
 		
       </a>      
     </div>
 
   </div>
 
- <div class="centered row">
-  <div class="eight centered wide column">
-	<div class="ui action input">
-			<input type="text" placeholder="Your reaction!" id="reaction">
-			<button class="ui button" id="react">Send</button>
-	</div>
-	</div>
-	<div class="eight wide column">
-		<img class="ui tiny image" id="image1" src="quest.png">
-	</div>
+  
 </div>
-  
-  
+<div class="row">
+<button class="ui button" id="jsonget">
+  TRy
+</button>
 </div>
 
 </div>
-</div>
+
 </div>
 </div>
 </body>
 </html>
-<script>
 
+<script>
+var mjpeg_img;
+var flag=0;
+  $('#jsonget').click(function(){
+     $.getJSON("http://query.yahooapis.com/v1/public/yql?q=select%20%2a%20from%20yahoo.finance.quotes%20WHERE%20symbol%3D%27WRC%27&format=json&diagnostics=true&env=store://datatables.org/alltableswithkeys&callback", function(data) {
+    alert(data.query.created);
+	}); 	
+	
+     });
+	 function jsonget(){
+	$.getJSON("http://query.yahooapis.com/v1/public/yql?q=select%20%2a%20from%20yahoo.finance.quotes%20WHERE%20symbol%3D%27WRC%27&format=json&diagnostics=true&env=store://datatables.org/alltableswithkeys&callback", function(data) {
+    console.log(data.query.created);
+	});}
+ 	var t=setInterval(jsonget,1000);
 $(document).ready(function(){
     $('#video1').click(function(){
-    var $video = $('#video'),
-		src = "https://www.twitch.tv/blizzheroesru/embed";
- 
-	$video.attr('src', src );
-	
-	
-    });
-	$('#video2').click(function(){
-    var $video = $('#video'),
-		src = "https://www.twitch.tv/pandafxfx/embed";
- 
-	$video.attr('src', src );
-    });
-	$('#video3').click(function(){
-    var $video = $('#video'),
-		src = "https://www.twitch.tv/ybicanoooobov/embed";
- 
-	$video.attr('src', src );
-    });
+     var $video = $('#video'),
+ 		src = "https://www.youtube.com/embed/hzpxDaItO7o";
+  
+ 	$video.attr('src', src );
+ 	
+ 	
+     });
+ 	$('#video2').click(function(){
+     var $video = $('#video'),
+ 		src = "https://www.twitch.tv/pandafxfx/embed";
+  
+ 	$video.attr('src', src );
+     });
+ 	$('#video3').click(function(){
+     var $video = $('#video'),
+ 		src = "https://www.twitch.tv/ybicanoooobov/embed";
+  
+ 	$video.attr('src', src );
+     });
 });
 $(document).ready(function(){
+$('#example1').progress();
     $('.ui .item').on('click', function() {
         $('.ui .item').removeClass('active');
         $(this).addClass('active');
     });             
 });
-   $('#react').click(function(){
+  /* $('#react').click(function(){
         var params = {
             // These are optional request parameters. They are set to their default values.
             "timezoneOffset": "0",
@@ -275,25 +175,24 @@ $(document).ready(function(){
         .fail(function() {
             alert("error");
         });
-    });
+    });*/
 
-var mjpeg_img;
-var flag=0; 
+/*
 function reload_img () {
 if (flag==0){
 	mjpeg_img.src = "http://192.168.1.194/html/cam_pic.php?time=" + new Date().getTime();
   }
   else{
-  
+	mjpeg_img.src = "http://192.168.1.194/html/cam_pic.php?time=" + new Date().getTime();
   }
 }
 function error_img () {
   
   if (flag==0){
-	setTimeout("mjpeg_img.src = \"http://192.168.1.194/html/cam_pic.php?time=\" + new Date().getTime()  + \"&pDelay=4000\"", 1000);
+	setTimeout("mjpeg_img.src = \"http://192.168.1.194/html/cam_pic.php?time=\" + new Date().getTime()  + \"&pDelay=1\"", 1000);
   }
   else{
-  
+  setTimeout("mjpeg_img.src = \"http://192.168.1.194/html/cam_pic.php?time=\" + new Date().getTime()  + \"&pDelay=1\"", 1000);
   }
 }
 function init() {
@@ -301,5 +200,5 @@ function init() {
   mjpeg_img.onload = reload_img;
   mjpeg_img.onerror = error_img;
   reload_img();
-}
+} */
 </script>
