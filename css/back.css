@@ -19,3 +19,15 @@
     background-size: cover;
     background-attachment: fixed;
 }
+
+
+.landpage-image3{
+      height: 100%;
+}
+
+.landpage-image3{
+    background-image: url(backPlayers.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+}

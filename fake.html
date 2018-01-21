@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Player's cam</title>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/semantic.min.css">
+<link rel="stylesheet" href="css/back.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.semanticui.min.css" >
+<script type="text/javascript" src="js/paper-full.js"></script>
+<link rel="shortcut icon" href="bayern_ico.ico" />
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="js/semantic.min.js"></script>
+ <script type="text/paperscript" canvas="canvas">
+	var raster = new Raster('backPlayers.png');
+	raster.position = view.center;
+	raster.scale(0.9);
+       
+        // var circle = new Shape.Circle({
+        //     center: [200, 100],
+        //     radius: 50,
+        //     fillColor: 'white',
+        //     strokeColor: 'red',
+        //     strokeWidth: 10
+        // });
+        // function onMouseDown(event){
+        //     circle.strokeWidth+=0.5;
+        //     circle.radius+=0.5;
+        // }
+ function jsonget(){
+    $.getJSON("http://192.168.1.87:1880/testObject", function(data) {
+   
+    //for (player in data)
+    circles[team.Robben].strokeWidth=data.Robben/7+5;
+    circles[team.Mueller].strokeWidth=data.Mueller/7+5;
+    circles[team.Lewandowski].strokeWidth=data.Lewandowski/7+5;
+    circles[team.Ribery].strokeWidth=data.Ribery/7+5;
+    circles[team.Suele].strokeWidth=data.Suele/7+5;
+    circles[team.Martinez].strokeWidth=data.Martinez/7+5;
+    circles[team.Rodriguez].strokeWidth=data.Rodriguez/7+5;
+    circles[team.Bernat].strokeWidth=data.Bernat/7+5;
+    circles[team.Boateng].strokeWidth=data.Boateng/7+5;
+    circles[team.Kimmich].strokeWidth=data.Kimmich/7+5;
+    circles[team.Ulreich].strokeWidth=data.Ulreich/7+5;
+
+
+    });}
+
+    var t=setInterval(jsonget,1000);
+
+        function onMouseDown(event){
+            //console.log("current circle is",team.Robben)
+            //circles[team.Robben].strokeWidth+=1;
+        }
+        var xdiff = 40;
+        var ydiff = 60
+        var team = JSON.parse("{\"Robben\":0,\"Mueller\":1,\"Lewandowski\":2,\"Ribery\":3,\"Suele\":4,\"Martinez\":5,\"Rodriguez\":6,\"Bernat\":7,\"Boateng\":8,\"Kimmich\":9,\"Ulreich\":10}");
+        var circles = [];
+		
+		var startx = 147;
+		var starty = 55;
+		var path = new Path();
+		path.strokeColor = 'red';
+		path.add(new Point(startx, starty)); 
+		path.add(new Point(startx+40, starty-15));
+		path.add(new Point(startx+80, starty)); 
+		path.add(new Point(startx+80, starty+60)); 
+		path.add(new Point(startx+40, starty+85)); 
+		path.add(new Point(startx, starty+60)); 			
+		path.closed = true;
+		circles.push(path);
+		
+		var startx = 95;
+		var starty = 130;
+		var path = new Path();
+		path.strokeColor = 'red';
+		path.add(new Point(startx, starty)); 
+		path.add(new Point(startx+40, starty-15));
+		path.add(new Point(startx+80, starty)); 
+		path.add(new Point(startx+80, starty+60)); 
+		path.add(new Point(startx+40, starty+85)); 
+		path.add(new Point(startx, starty+60)); 			
+		path.closed = true;
+		circles.push(path);
+		
+		var startx = 200;
+		var starty = 130;
+		var path = new Path();
+		path.strokeColor = 'red';
+		path.add(new Point(startx, starty)); 
+		path.add(new Point(startx+40, starty-15));
+		path.add(new Point(startx+80, starty)); 
+		path.add(new Point(startx+80, starty+60)); 
+		path.add(new Point(startx+40, starty+85)); 
+		path.add(new Point(startx, starty+60)); 			
+		path.closed = true;
+		circles.push(path);
+		
+		var startx = 285;
+		var starty = 130;
+		var path = new Path();
+		path.strokeColor = 'red';
+		path.add(new Point(startx, starty)); 
+		path.add(new Point(startx+40, starty-15));
+		path.add(new Point(startx+80, starty)); 
+		path.add(new Point(startx+80, starty+60)); 
+		path.add(new Point(startx+40, starty+85)); 
+		path.add(new Point(startx, starty+60)); 			
+		path.closed = true;
+		circles.push(path);
+		
+		var startx = 52;
+		var starty = 237;
+		var path = new Path();
+		path.strokeColor = 'red';
+		path.add(new Point(startx, starty)); 
+		path.add(new Point(startx+40, starty-15));
+		path.add(new Point(startx+80, starty)); 
+		path.add(new Point(startx+80, starty+60)); 
+		path.add(new Point(startx+40, starty+85)); 
+		path.add(new Point(startx, starty+60)); 			
+		path.closed = true;
+		circles.push(path);
+		
+		var startx = 165;
+		var starty = 220;
+		var path = new Path();
+		path.strokeColor = 'red';
+		path.add(new Point(startx, starty)); 
+		path.add(new Point(startx+40, starty-15));
+		path.add(new Point(startx+80, starty)); 
+		path.add(new Point(startx+80, starty+60)); 
+		path.add(new Point(startx+40, starty+85)); 
+		path.add(new Point(startx, starty+60)); 			
+		path.closed = true;
+		circles.push(path);
+		
+				var startx = 3;
+		var starty = 310;
+		var path = new Path();
+		path.strokeColor = 'red';
+		path.add(new Point(startx, starty)); 
+		path.add(new Point(startx+40, starty-15));
+		path.add(new Point(startx+80, starty)); 
+		path.add(new Point(startx+80, starty+60)); 
+		path.add(new Point(startx+40, starty+85)); 
+		path.add(new Point(startx, starty+60)); 			
+		path.closed = true;
+		circles.push(path);
+				var startx = 103;
+		var starty = 310;
+		var path = new Path();
+		path.strokeColor = 'red';
+		path.add(new Point(startx, starty)); 
+		path.add(new Point(startx+40, starty-15));
+		path.add(new Point(startx+80, starty)); 
+		path.add(new Point(startx+80, starty+60)); 
+		path.add(new Point(startx+40, starty+85)); 
+		path.add(new Point(startx, starty+60)); 			
+		path.closed = true;
+		circles.push(path);
+				var startx = 232;
+		var starty = 310;
+		var path = new Path();
+		path.strokeColor = 'red';
+		path.add(new Point(startx, starty)); 
+		path.add(new Point(startx+40, starty-15));
+		path.add(new Point(startx+80, starty)); 
+		path.add(new Point(startx+80, starty+60)); 
+		path.add(new Point(startx+40, starty+85)); 
+		path.add(new Point(startx, starty+60)); 			
+		path.closed = true;
+		circles.push(path);
+				var startx = 333;
+		var starty = 310;
+		var path = new Path();
+		path.strokeColor = 'red';
+		path.add(new Point(startx, starty)); 
+		path.add(new Point(startx+40, starty-15));
+		path.add(new Point(startx+80, starty)); 
+		path.add(new Point(startx+80, starty+60)); 
+		path.add(new Point(startx+40, starty+85)); 
+		path.add(new Point(startx, starty+60)); 			
+		path.closed = true;
+		circles.push(path);
+		
+		var startx = 160;
+		var starty = 370;
+		var path = new Path();
+		path.strokeColor = 'red';
+		path.add(new Point(startx, starty)); 
+		path.add(new Point(startx+40, starty-15));
+		path.add(new Point(startx+80, starty)); 
+		path.add(new Point(startx+80, starty+60)); 
+		path.add(new Point(startx+40, starty+85)); 
+		path.add(new Point(startx, starty+60)); 			
+		path.closed = true;
+		circles.push(path);
+
+                    
+           
+ circles[team.Robben].onclick = function(){
+ console.log("s;kljsd")
+ };
+// Select the path, so we can see its handles:
+//path.fullySelected = true;
+
+// Smooth the segments of the copy:
+//path.smooth();
+     
+    </script>
+</head>
+<!-- onload="setTimeout('init();', 100);" -->
+<body>
+ 
+<div class="ui red inverted menu">
+	<div class="item">
+    <img src="bayern.png">
+  </div>
+  <a class="active item">
+    <h3>Professional match</h3>
+  </a>
+  <a class="item">
+    <h3> Amateurs</h3>
+  </a>
+  <a class="item">
+    <h3>Buy ProCam</h3>
+  </a>
+  <a class="item">
+    <h3>Allianz arena</h3>
+  </a>
+  <a class="item">
+    <h3>Tickets</h3>
+  </a>
+  <a class="item">
+    <h3>About FCBayern</h3>
+  </a>
+  <a class="item">
+    <h3>Fans</h3>
+  </a>
+</div>
+<div class="landpage-image">
+<div class=" ui middle aligned center grid">
+
+
+<div class="ui container">
+<div class="ui teal progress" data-percent="74" id="example1">
+		<div class="bar"></div>
+	<div class="label">68:30</div>
+	</div>
+<div class="ui grid">
+
+<div class="row  landpage-image2">
+  <div class="ten wide stretched column">
+ 
+  <iframe class="centered" id="video"  width="100%"  src="https://www.youtube.com/embed/hzpxDaItO7o" frameborder="0" allowfullscreen ></iframe>
+   <!--  <img id="mjpeg_dest"  src="http://192.168.1.194/html/cam_pic.php?time=1516476589503&amp;pDelay=40000">
+      -->
+   <!-- <img id="mjpeg_dest" /> -->
+  </div>
+  <div class="six wide column">
+    <div class="ui vertical fluid right tabular menu">
+	
+	
+     <canvas  id="canvas"  height="400px" resize></canvas> 
+	 
+    </div>
+
+  </div>
+
+  
+</div>
+
+
+</div>
+
+</div>
+</div>
+</body>
+</html>
+
+<script>
+var mjpeg_img;
+var flag=0;
+  $('#jsonget').click(function(){
+     $.getJSON("http://query.yahooapis.com/v1/public/yql?q=select%20%2a%20from%20yahoo.finance.quotes%20WHERE%20symbol%3D%27WRC%27&format=json&diagnostics=true&env=store://datatables.org/alltableswithkeys&callback", function(data) {
+    alert(data.query.created);
+	}); 	
+	
+     });
+	 function jsonget(){
+	$.getJSON("http://192.168.1.87:1880/testObject", function(data) {
+    
+	});}
+ 	var t=setInterval(jsonget,1000);
+$(document).ready(function(){
+    $('#video1').click(function(){
+     var $video = $('#video'),
+ 		src = "https://www.youtube.com/embed/hzpxDaItO7o";
+  
+ 	$video.attr('src', src );
+ 	
+ 	
+     });
+ 	$('#video2').click(function(){
+     var $video = $('#video'),
+ 		src = "https://www.twitch.tv/pandafxfx/embed";
+  
+ 	$video.attr('src', src );
+     });
+ 	$('#video3').click(function(){
+     var $video = $('#video'),
+ 		src = "https://www.twitch.tv/ybicanoooobov/embed";
+  
+ 	$video.attr('src', src );
+     });
+});
+$(document).ready(function(){
+$('#example1').progress();
+    $('.ui .item').on('click', function() {
+        $('.ui .item').removeClass('active');
+        $(this).addClass('active');
+    });             
+});
+  /* $('#react').click(function(){
+        var params = {
+            // These are optional request parameters. They are set to their default values.
+            "timezoneOffset": "0",
+            "verbose": "true",
+            "spellCheck": "false",
+            "staging": "false",
+        };
+     var reaction = document.getElementById("reaction").value+"&";
+	 var $im = $('#image1');
+ 
+	
+	
+        $.ajax({
+            url: "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/05268794-99b6-4c4e-81b5-588023f96904?q="+reaction + $.param(params),
+            beforeSend: function(xhrObj){
+                // Request headers
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","97a31b4981ce40c28c3de0ddc0815dfa");
+            },
+            type: "GET",
+            // The request body may be empty for a GET request
+            data: "{body}",
+        })
+        .done(function(data) {
+            // Display a popup containing the top intent
+			if (data.topScoringIntent.intent == "HiW") {	
+		
+				   $im.attr('src', "tu.png" );
+				} else {
+			
+					$im.attr('src', "td.png" );
+				}
+            
+        })
+        .fail(function() {
+            alert("error");
+        });
+    });*/
+
+/*
+function reload_img () {
+if (flag==0){
+	mjpeg_img.src = "http://192.168.1.194/html/cam_pic.php?time=" + new Date().getTime();
+  }
+  else{
+	mjpeg_img.src = "http://192.168.1.194/html/cam_pic.php?time=" + new Date().getTime();
+  }
+}
+function error_img () {
+  
+  if (flag==0){
+	setTimeout("mjpeg_img.src = \"http://192.168.1.194/html/cam_pic.php?time=\" + new Date().getTime()  + \"&pDelay=1\"", 1000);
+  }
+  else{
+  setTimeout("mjpeg_img.src = \"http://192.168.1.194/html/cam_pic.php?time=\" + new Date().getTime()  + \"&pDelay=1\"", 1000);
+  }
+}
+function init() {
+  mjpeg_img = document.getElementById("mjpeg_dest");
+  mjpeg_img.onload = reload_img;
+  mjpeg_img.onerror = error_img;
+  reload_img();
+} */
+
+
+
+</script>
