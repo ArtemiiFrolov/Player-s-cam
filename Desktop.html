@@ -87,7 +87,9 @@
   TRy
 </button>
 </div>
-
+<div class="row">
+<iframe src="file:///E:/My%20programs/Python/Player'scam/image%20test.html" ></iframe>
+</div>
 </div>
 
 </div>
@@ -105,8 +107,8 @@ var flag=0;
 	
      });
 	 function jsonget(){
-	$.getJSON("http://query.yahooapis.com/v1/public/yql?q=select%20%2a%20from%20yahoo.finance.quotes%20WHERE%20symbol%3D%27WRC%27&format=json&diagnostics=true&env=store://datatables.org/alltableswithkeys&callback", function(data) {
-    console.log(data.query.created);
+	$.getJSON("http://192.168.1.87:1880/testObject", function(data) {
+    console.log("Robben:"+data.Robben+", Mueller:"+data.Mueller+", Lewandowski:"+data.Lewandowski);
 	});}
  	var t=setInterval(jsonget,1000);
 $(document).ready(function(){
