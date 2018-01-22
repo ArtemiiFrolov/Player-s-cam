@@ -17,7 +17,7 @@
 
 </head>
 <!-- onload="setTimeout('init();', 100);" -->
-<body>
+<body onload="startTime()">
 <div class="ui red inverted menu">
 	<div class="item">
     <img src="bayern.png">
@@ -51,7 +51,7 @@
 <div class="ui container">
 <div class="ui teal progress" data-percent="74" id="example1">
 		<div class="bar"></div>
-	<div class="label"><h3>63:30</h3></div>
+	<div class="label"><h3 id="clock"></h3></div>
 	</div>
 <div class="ui grid">
 
@@ -134,6 +134,17 @@ $('#example1').progress();
         $(this).addClass('active');
     });             
 });
+function startTime() {
+    var today = new Date();
+    var s = today.getSeconds();  
+	s = checkTime(s);	
+    document.getElementById('clock').innerHTML = "63:"+s;
+	var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
   /* $('#react').click(function(){
         var params = {
             // These are optional request parameters. They are set to their default values.
